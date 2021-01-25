@@ -1,31 +1,28 @@
 # Storylines
 Implement the information in the two csv files as a graph and write functions to output the following:
+
 (a) Function: average. Should print the average number of characters each Marvel character is
 associated with, as a float upto two decimal places.
 Sample random output:
 $java assignment4 nodes.csv edges.csv average
 7.43
 
-(b) Function: rank. Should print a sorted list of all characters, with comma as delimiter (only comma,
-as delimiter and no space). Sorting should be in descending order of co-occurrence with other
+(b) Function: rank prints a sorted list of all characters, with comma as delimiter (only comma,
+as delimiter and no space). Sorting is in descending order of co-occurrence with other
 characters. That is, characters with more co-occurrences appear before. If there is a tie between
-characters based on co-occurrence count, then the order should be descending based on
+characters based on co-occurrence count, then the order is in descending based on
 lexicographic order of the character strings.
-You can implement any O(nlogn) sorting algorithm. The test input file will be a huge graph and
-we will run the evaluation cases with timeout. If you implement O(n^2) sorting instead of
-O(nlogn) then the cases will timeout, and you will lose marks. Also don’t use Java inbuilt sorting,
-but implement on your own. We will check your imports against allowed_imports.txt.
 Sample random output:
 $java assignment4 nodes.csv edges.csv rank
 Yogish,Riju,Rahul
 
-(c) Function: independent_storylines_dfs. Should implement DFS, then find independent storylines,
-that have no edge across them, using DFS. Print the characters in each independent storyline, as a
+(c) Function: independent_storylines_dfs  implements DFS, then find independent storylines,
+that have no edge across them, using DFS. Prints the characters in each independent storyline, as a
 separate line in the output.
-The largest storyline (with maximum characters) should appear at the top, followed by the second
-largest and so on. Within each line, the character names should be delimited with comma, and
+The largest storyline (with maximum characters)  appears at the top, followed by the second
+largest and so on. Within each line, the character names are delimited with comma, and
 lexicographically sorted in descending order. If two storylines have same number of characters,
-ties should be broken in lexicographically descending order of character names.
+ties are broken in lexicographically descending order of character names.
 Sample random output:
 $java assignment4 nodes.csv edges.csv independent_storylines_dfs
 Riju,Rahul
